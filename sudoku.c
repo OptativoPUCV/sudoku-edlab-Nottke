@@ -79,7 +79,7 @@ List* get_adj_nodes(Node* n){
             }
           }
           n->sudo[i][j] = 0;
-          //return list;
+          return list;
         }
       }
     }
