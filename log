@@ -1,0 +1,15 @@
+Wed Oct 14 19:12:30 UTC 2020: 
+ sudoku.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:56:9: error: variable ‘num’ set but not used [-Werror=unused-but-set-variable]
+     int num;
+         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+Wed Oct 14 19:12:48 UTC 2020: 
+ sudoku.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+ tests:  0|0
+0cf920f
