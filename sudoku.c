@@ -43,7 +43,22 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-
+  int value;
+    for (int i = 1; i < 9; i++){
+      for (int j = 1; j < 9; j++){
+        if (n->sudo[i][j] != 0){
+          value = n->sudo[i][j];
+          Node *newnode = copy(n);
+          for (i = 1; i < 9; i++){
+            for (j = 1; j < 9; j++){
+              if (value == newnode->sudo[i][j]){
+                return 0;
+              }
+            }
+          }
+        }
+      }
+    }
     return 1;
 }
 
