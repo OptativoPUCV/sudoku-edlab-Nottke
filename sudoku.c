@@ -63,11 +63,11 @@ int is_valid(Node* n){
         for ( int z = 0; z < 9; z++){
           int x = 3*(k / 3) + (z / 3);
           int y = 3*(k % 3) + (z % 3);
-          printf("%d", n->sudo[x][y]);
+          //printf("%d", n->sudo[x][y]);
           if (z % 3 == 2){
             printf("\n");
           }
-          if (n->sudo[x][j] == value){
+          if (n->sudo[x][y] == value){
             if (( x != i) || (y != j)){
               return 0;
             }
