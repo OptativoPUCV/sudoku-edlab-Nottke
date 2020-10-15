@@ -58,12 +58,12 @@ int is_valid(Node* n){
             return 0;
           }
         }
-        int k;
+        int k = 4;
         k = (i/3)*3 + j/3;
         for ( int z = 0; z < 9; z++){
           int x = 3*(k / 3) + (z / 3);
           int y = 3*(k % 3) + (z % 3);
-          printf("%d", n->sudo[x][y]);
+          //printf("%d", n->sudo[x][y]);
           if (z % 3 == 2){
             printf("\n");
           }
