@@ -64,9 +64,9 @@ int is_valid(Node* n){
           int x = 3*(k / 3) + (z / 3);
           int y = 3*(k % 3) + (z % 3);
           //printf("%d", n->sudo[x][y]);
-          if (z % 3 == 2){
+          //if (z % 3 == 2){
             //printf("\n");
-          }
+          //}
           if (n->sudo[x][y] == value){
             if (( x != i) || (y != j)){
               return 0;
