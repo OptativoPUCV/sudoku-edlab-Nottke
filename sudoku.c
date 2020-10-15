@@ -65,7 +65,7 @@ int is_valid(Node* n){
           int y = 3*(k % 3) + (z % 3);
           //printf("%d", n->sudo[x][y]);
           if (z % 3 == 2){
-            printf("\n");
+            //printf("\n");
           }
           if (n->sudo[x][y] == value){
             if (( x != i) || (y != j)){
