@@ -44,19 +44,33 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
   int value;
-    for (int i = 1; i < 9; i++){
-      for (int j = 1; j < 9; j++){
+    for (int i = 0; i < 9; i++){
+      for (int j = 0; j < 9; j++){
+        value = n->sudo[i][j];
         if (n->sudo[i][j] != 0){
-          value = n->sudo[i][j];
-          Node *newnode = copy(n);
-          for (int m = 1; m < 9; m++){
-            for (int n = 1; n < 9; n++){
-              if (value == newnode->sudo[1][n])return 0;
-              if (value == newnode->sudo[2][n])return 0;
-              if (value == newnode->sudo[3][n])return 0;
-              if (value == newnode->sudo[m][1])return 0;
-              if (value == newnode->sudo[m][2])return 0;
-              if (value == newnode->sudo[m][3])return 0;
+          for (int x = 0; x < 9; x++){
+            if((x != i) && (n->sudo[x][j] == value)){
+              return 0;
+            }
+          }
+          for (int y = 0; y < 9;y++){
+            if ((y != j) && (n->sudo[i][j] == value)){
+              return 0;
+            }
+          }
+          int k;
+          k = (i/3)*3 + j/3;
+          for ( int z = 0; z < 9; z++){
+            int x = 3*(k / 3) + (z % 3);
+            int y = 3*(k % 3) + (z / 3);
+            //printf("%d", n->sudo[x][y]);
+            if (z % 3 == 2){
+              printf("\n");
+            }
+            if (n->sudo[x][j] == value){
+              if (( x != i) || (y != j)){
+                return 0;
+              }
             }
           }
         }
